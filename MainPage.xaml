@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTest.MainPage">
+    <Grid
+        HeightRequest="400"
+        WidthRequest="600"
+        Background="white"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <Rectangle
+            WidthRequest="100"
+            HeightRequest="20"
+            Background="black">
+            <Rectangle.Shadow>
+                <Shadow
+                    Brush="black"
+                    Offset="0,-10"
+                    Radius="10"
+                    Opacity="1"/>
+            </Rectangle.Shadow>
+
+        </Rectangle>
+    </Grid>
+</ContentPage>
