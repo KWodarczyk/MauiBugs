@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bugs", "Bugs", "{ACE1180D-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowIssue", "Bugs\ShadowIssue\ShadowIssue.csproj", "{B6012FA4-523E-4808-99FA-7ADD71F61A11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewWidthInPopupIssue", "Bugs\CollectionViewWidthInPopupIssue\CollectionViewWidthInPopupIssue.csproj", "{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,12 +29,19 @@ Global
 		{B6012FA4-523E-4808-99FA-7ADD71F61A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6012FA4-523E-4808-99FA-7ADD71F61A11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B6012FA4-523E-4808-99FA-7ADD71F61A11}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B6012FA4-523E-4808-99FA-7ADD71F61A11} = {ACE1180D-27CD-4955-8B70-869D22F5005D}
+		{860A8FA1-23BE-47AE-A2E6-53CD1D1D7C47} = {ACE1180D-27CD-4955-8B70-869D22F5005D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}

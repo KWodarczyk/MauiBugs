@@ -9,6 +9,6 @@
 /.vs/MySandbox/DesignTimeBuild
 /.vs/MySandbox/v17
 /Bugs/ShadowIssue/obj
-bin/*
-obj/*
-/Bugs/CollectionViewWidthInPopupIssue/bin/Debug
+**/bin
+**/obj
+
