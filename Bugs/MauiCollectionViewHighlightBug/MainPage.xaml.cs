@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Maui.Views;
-
-namespace MauiTest
+﻿namespace MauiCollectionViewHighlightBug
 {
     public partial class MainPage : ContentPage
     {
