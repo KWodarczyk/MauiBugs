@@ -1,13 +1,13 @@
-﻿
-using Microsoft.Maui.Controls.Shapes;
-
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace MauiTest
-{
+using Microsoft.Maui.Controls.Shapes;
 
+
+
+namespace MauiBlazorTest
+{
     public class Selectable : INotifyPropertyChanged
     {
         private bool _selected;
@@ -105,7 +105,7 @@ namespace MauiTest
 
         private void CollectionView_Scrolled(object sender, ItemsViewScrolledEventArgs e)
         {
-            int numberOfVisibleItems = (e.LastVisibleItemIndex - e.FirstVisibleItemIndex)+1;
+            int numberOfVisibleItems = (e.LastVisibleItemIndex - e.FirstVisibleItemIndex) + 1;
 
             SelectItemOnScroll(e.VerticalOffset);
         }
@@ -113,7 +113,7 @@ namespace MauiTest
         private void SelectItemOnScroll(double verticalOffset)
         {
 
-            int currentIndex = (int) ((_recTopEdge + verticalOffset) / _itemHeight);
+            int currentIndex = (int)((_recTopEdge + verticalOffset) / _itemHeight);
 
             if (_selectedItem is not null && _selectedItem.Index != currentIndex)
             {
@@ -156,7 +156,7 @@ namespace MauiTest
             int currentIndex = firstVisibleItemIndex;
             for (int i = 0; i < numberOfVisibleItems; i++)
             {
-                double itemTopEdgePosition = _itemHeight * i ;
+                double itemTopEdgePosition = _itemHeight * i;
                 double itemBottomEdgePosition = itemTopEdgePosition + _itemHeight;
 
                 double itemSelectionPoint = itemBottomEdgePosition + (_itemHeight / 2);//selection point is item's center point
@@ -211,7 +211,7 @@ namespace MauiTest
         {
             SelectableItems[6].SelecableColor = Brush.DimGray;
 
-            if(SelectableTest.SelecableColor == Brush.Blue)
+            if (SelectableTest.SelecableColor == Brush.Blue)
             {
                 SelectableTest.SelecableColor = Brush.Red;
             }
@@ -246,32 +246,5 @@ namespace MauiTest
 
             SelectItemOnScroll(0);
         }
-
-        private void mycollectionview_Loaded(object sender, EventArgs e)
-        {
-            var h = 300;// mycollectionview.Bounds.Height;
-
-            var h2 = mycollectionview.DesiredSize.Height;
-            var h3 = mycollectionview.Frame.Height;
-            var center = h / 2;
-
-            _numberOfVisibleItems = 8;// ((IElementController)mycollectionview).LogicalChildren.Count;
-            _itemHeight = h / _numberOfVisibleItems;
-
-            rec = new Rectangle();
-            rec.HeightRequest = _itemHeight;
-            rec.Stroke = Brush.Aqua;
-            rec.StrokeThickness = 2;
-
-
-
-            _recTopEdge = center - (_itemHeight / 2);
-            _recBottomEdge = _recTopEdge + rec.HeightRequest;
-
-            myGrid.Children.Add(rec);
-
-            SelectItemOnScroll(0);
-        }
-    
     }
 }

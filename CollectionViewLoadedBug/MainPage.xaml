@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewLoadedBug.MainPage">
+
+    <Grid
+        x:Name="myGrid"
+        HeightRequest="300"
+        WidthRequest="200"
+
+        BackgroundColor="Gray">
+        <CollectionView
+            Loaded="mycollectionview_Loaded"
+            Grid.Row="2"
+            x:Name="mycollectionview"
+            BackgroundColor="Green"
+            VerticalScrollBarVisibility="Never">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    ItemSpacing="0"
+                    Orientation="Vertical"
+                    SnapPointsAlignment="Center"
+                    SnapPointsType="MandatorySingle"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate >
+
+                    <Frame
+                        HasShadow="True"
+                        WidthRequest="50"
+                        Padding="0"
+                        BorderColor="Orange"
+                        Background="blue"
+                        CornerRadius="5">
+
+
+                        <Label
+                            Text="{Binding}"
+                            FontAttributes="Bold"
+                            Padding="0"
+                            Margin="0"
+                            TextColor="Pink"
+                            FontSize="18"
+                            HorizontalOptions="Center"/>
+
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:Int32}">
+                    <x:Int32>1</x:Int32>
+                    <x:Int32>2</x:Int32>
+                    <x:Int32>3</x:Int32>
+                    <x:Int32>4</x:Int32>
+                    <x:Int32>5</x:Int32>
+                    <x:Int32>6</x:Int32>
+                    <x:Int32>7</x:Int32>
+                    <x:Int32>8</x:Int32>
+                    <x:Int32>9</x:Int32>
+                    <x:Int32>10</x:Int32>
+                    <x:Int32>11</x:Int32>
+                    <x:Int32>12</x:Int32>
+                    <x:Int32>13</x:Int32>
+                    <x:Int32>14</x:Int32>
+                    <x:Int32>15</x:Int32>
+                    <x:Int32>16</x:Int32>
+                    <x:Int32>17</x:Int32>
+                    <x:Int32>18</x:Int32>
+                    <x:Int32>19</x:Int32>
+                    <x:Int32>20</x:Int32>
+
+                </x:Array>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
